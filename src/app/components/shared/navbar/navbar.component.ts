@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
+
+
 
 
 @Component({
@@ -8,7 +10,9 @@ import { Route, Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Route) { }
+  
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -16,7 +20,7 @@ export class NavbarComponent implements OnInit {
   buscarHeroe(termino: string){
     console.log(termino);
 
-    this.router.navigate(['/buscar', termino])
+    this.router.navigate(['/buscar', termino]);
   }
 
 }
